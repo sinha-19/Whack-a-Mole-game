@@ -1,0 +1,79 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.game-grid,
+.mole-hole,
+.score-panel,
+.game-controls {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.mole-hole {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+button:focus-visible,
+.difficulty-option:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+button,
+.difficulty-option,
+.mole-hole,
+.control-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-contrast: high) {
+  .app {
+    background: #000;
+    color: #fff;
+  }
+  .game-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+  }
+  .mole-hole {
+    border: 2px solid #fff;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@media print {
+  .app {
+    background: white !important;
+    color: black !important;
+  }
+  .game-grid,
+  .control-buttons {
+    display: none !important;
+  }
+}
